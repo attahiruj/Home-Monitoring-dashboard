@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Monitoring Dashboard</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <h3 class="logo dark">MetaHome</h3>
+            <h3 id="time">12:19:50 PM</h3>
+            <h3 id="date">Sunday, 5 december, 2022 </h3>
+            <h3>Customise Dashboard</h3>
+            <span class="material-icons-outlined">expand_more</span>
+            <div class="user">
+                <h3>Hello<span class="username dark">Attahir</span></h3>
+                <img src="/images/profile.jpg" alt="profile picture" class="profile_pic">
+            </div>
+            <span class="material-icons-outlined">logout</span>
+        </nav>
+
+        <aside class="main_nav">
+            <a href="#" class="active">
+                <i class="uil uil-estate"></i>
+                <h3>Home</h3>
+            </a>
+            <a href="#">
+                <i class="uil uil-mobile-android-alt"></i>
+                <h3>Devices</h3>
+            </a>
+            <a href="#">
+                <i class="uil uil-lightbulb-alt"></i>
+                <h3>Lights</h3>
+            </a>
+            <a href="#">
+                <i class="uil uil-temperature"></i>
+                <h3>Temperature</h3>
+            </a>
+            <a href="#">
+                <i class="uil uil-bolt-alt"></i>
+                <h3>Electricity</h3>
+            </a>
+            <a href="#">
+                <i class="uil uil-tear"></i>
+                <h3>Water</h3>
+            </a>
+            <a href="#">
+                <i class="uil uil-wifi"></i>
+                <h3>Wi-Fi</h3>
+            </a>
+            <a href="#">
+                <i class="uil uil-shield"></i>
+                <h3>Security</h3>
+            </a>
+            <a href="#" class="settings">
+                <i class="uil uil-setting"></i>
+                <h3>Setting</h3>
+            </a>
+            <div class="theme_mode">
+                <i class="uil uil-sun"></i>
+                <div class="toggle">
+                    <div class="toggler"></div>
+                </div>
+                <i class="uil uil-moon"></i>
+            </div>
+        </aside>
+
+        <div class="main">
+            <div class="top">
+                <div class="card weather">
+                    <div class="card_name">
+                        <h3 class="dark">Weather</h3>
+                        <i class="uil uil-angle-right-b light"></i>
+                    </div>
+                    <div class="card_body">
+                        <div class="left">
+                            <h4 class="med">Minna</h4>
+                            <h2 class="med">23°C</h2>
+                            <h5><span class="min_temp">20°C </span> / <span class = "max_temp"> 30°C</span></h5>
+                            <h5 class="light">Partly Cloudy</h5>
+                        </div>
+                        <div class="right">                        
+                            <img src="/images/weather.png" alt="weather picture">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card temperature">
+                    <div class="card_name">
+                        <h3 class="dark">Temperature</h3>
+                        <i class="uil uil-angle-right-b light"></i>
+                    </div>
+                    <div class="card_body">
+                        <div class="top">
+                            <span class="material-icons-outlined snow">ac_unit</span>
+                            <h2 class="med">23°C</h2>
+                            <div class="temp_control light">
+                                <span class="material-icons-outlined">arrow_drop_up</span>
+                                <span class="material-icons-outlined">arrow_drop_down</span>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <h5 class="light">Auto Room Temperature System</h5>                     
+                            <div class="toggle">
+                                <div class="toggler"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card wifi">
+                    <div class="card_name">
+                        <h3 class="dark">Wi-Fi</h3>
+                        <i class="uil uil-angle-right-b light"></i>
+                    </div>
+                    <div class="card_body">
+                        <div class="top">
+                            <h3 class="med">Connected</h3>
+                            <h3 class="light"><span class="med">4</span> Connected devices</h3>
+                        </div>
+                        <div class="bottom">
+                            <h3 class="med">
+                                16.8 
+                                <span class="light">GB</span>
+                                <span class="bad">sent</span>
+                            </h3>
+                            <h3 class="med">
+                                22.4 
+                                <span class="light">GB</span>
+                                <span class="good">received</span>
+                            </h3>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card electricity">
+                    <div class="card_name">
+                        <h3 class="dark">Electricity</h3>
+                        <i class="uil uil-angle-right-b light"></i>
+                    </div>
+                    <div class="card_body">
+                        <div class="top">
+                            <div class="toggle_big">
+                                <h3 class="med">Daily</h3>
+                            </div>
+                            <h3 class="med">Weekly</h3>
+                        </div>
+                        <div class="bottom">
+                            <embed src="/images/Stats.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movies card">
+                <div class="movie_desc">
+                    <h2 class="card_name">Tonight’s Movie Suggestion</h2>
+                    <h3 class="movie_title">
+                        Spider-Man - No Way Home (2021)
+                        <div class="stars">
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                            <i class="uil uil-star"></i>
+                        </div>
+                        <span class="thin">(12658 Reviews)</span>
+                    </h3>
+                    <p class="movie_discription">
+                        With Spider-Man's identity now revealed, our friendly neighborhood web-slinger is unmasked and no longer able to separate his normal life as Peter Parker from the high stakes of being a superhero. When Peter asks for help from Doctor Strange, the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.
+                    </p>
+                    <div class="card button"><h3 class="bold">Choose</h3></div>
+                </div>
+                <img src="/images/bg.png">
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="card notification">
+                <div class="card_name">
+                    <h3 class="dark">Notifications</h3>
+                    <i class="uil uil-angle-right-b light"></i>
+                </div>
+                <div class="card_body">
+                    <ul class="notif">
+                        <li>
+                            <span class="bullet red"></span>
+                            <span>
+                                <h4 class="med">Possible raining in 14:30</h4>
+                                <h5 class="light">5 mins ago</h5>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            <span>
+                                <h4 class="med">New message from Boss</h4>
+                                <h5 class="light">12 mins ago</h5>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="bullet"></span>
+                            <span>
+                                <h4 class="med">Your food will arrive in 20 minutes</h4>
+                                <h5 class="light">17 mins ago</h5>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card quick_panel">
+                <div class="card_name">
+                    <h3 class="dark">Quick Panel</h3>
+                    <i class="uil uil-angle-right-b light"></i>
+                </div>
+                <div class="card_body">
+                    <div>
+                        <i class="uil uil-lightbulb-alt"></i>
+                        <h4 class="med">Lights</h4>
+                        <div class="toggle">
+                            <div class="toggler"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="uil uil-music"></i>
+                        <h4 class="med">Music</h4>
+                        <div class="toggle">
+                            <div class="toggler"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="uil uil-wifi"></i>
+                        <h4 class="med">Wi-Fi</h4>
+                        <div class="toggle">
+                            <div class="toggler"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="uil uil-webcam"></i>
+                        <h4 class="med">CCTV Cam</h4>
+                        <div class="toggle">
+                            <div class="toggler"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="uil uil-keyhole-square"></i>
+                        <h4 class="med">Door Lock</h4>
+                        <div class="toggle">
+                            <div class="toggler"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
