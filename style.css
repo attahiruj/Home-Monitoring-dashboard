@@ -48,12 +48,12 @@ body{
 .container{
     background: var(--color-primary);
     width: 90%;
-    margin: auto;
-    padding: var(--padding-large);
-    display: flex;
-    position: relative;
-    justify-content: center;
-    gap: 3rem;
+    margin: 2rem auto;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 15rem auto 18rem;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .container .uil{
@@ -91,7 +91,7 @@ body{
 
 .toggle{
     background: var(--color-sec-med);
-    width: 30%;
+    width: fit-content;
     padding: var(--padding-toggle);
     border-radius: 25px;
     box-shadow: var(--btn-shadow);
@@ -105,6 +105,10 @@ body{
     aspect-ratio: 1/1;
     border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
 }
 
 .card{
@@ -166,16 +170,15 @@ nav .user img{
 
 /* =========== MAIN NAV =========== */
 .main_nav{
-    margin-top: 7rem;
-    margin-left: 5rem;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    position: relative;
+    width: auto;
+    padding: 0;
 }
 
 .main_nav a{
-    width: 13rem;
+    width: fit-content;
     display: flex;
     gap: 1rem;
     color: var(--color-secondary);
@@ -184,7 +187,6 @@ nav .user img{
     border-radius: 0 20px 20px 0px;
     align-items: center;
     transition: all 500 ease;
-    cursor: pointer;
 }
 
 .main_nav a:hover{
@@ -212,32 +214,39 @@ nav .user img{
 
 .main_nav .theme_mode{
     display: flex;
+    width: fit-content;
     align-items: center;
-    justify-content: center;
     gap: 1rem;
-    padding: var(--padding-btn);
-    margin-top: 1rem;
-    margin-left: 1.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: var(--color-primary);
+    background: var(--color-secondary);
+    border-radius: 10px;
+    height: 30px;
+}
+
+.main_nav .theme_mode .active{
+    background: var(--color-card);
+    border-radius: 10px;
     color: var(--color-secondary);
 }
+
 
 /* =========== MAIN =========== */
 .main{
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-top: 6rem;
 }
 
-.main .top{
+.main .cards{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    /* padding: var(--padding-medium); */
+    gap: 3rem;
     width: auto;
 }
 
-.main .top .card{
+.main .cards .card{
     background: var(--color-card);
     padding: var(--padding-small);
     height: 150px;
@@ -256,32 +265,32 @@ nav .user img{
 
 
 /* =========== General card =========== */
-.main .top .card{
+.main .cards .card{
     display: flex;
     flex-direction: column;
     padding: var(--padding-large);
     align-content: center;
 }
 
-.main .top .card_name{
+.main .cards .card_name{
     display: flex;
     justify-content: space-between;
     margin-top: 0;
 }
-.main .top .card_body{
+.main .cards .card_body{
     margin-top: 0.5rem;
     display: flex;
     justify-content: space-around;
 }
 
-.main .top .card_name span{
+.main .cards .card_name span{
     color: var(--color-sec-low);
     cursor: pointer;
 }
 
 
 /* =========== Weather card =========== */
-.main .top .weather .left{
+.main .cards .weather .left{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -289,19 +298,19 @@ nav .user img{
     width: 100%;
 }
 
-.main .top .weather .left h5{
+.main .cards .weather .left h5{
     letter-spacing: 1px;
 }
 
-.main .top .weather .left .min_temp{
+.main .cards .weather .left .min_temp{
     color: var(--color-cold); 
 }
 
-.main .top .weather .left .max_temp{
+.main .cards .weather .left .max_temp{
     color: #FF7A00; 
 }
 
-.main .top .weather .right{
+.main .cards .weather .right{
     display: flex;
     margin-right: -2rem;
     margin-top: 0;
@@ -310,7 +319,7 @@ nav .user img{
     /* align-items: center; */
 }
 
-.main .top .weather .right img{
+.main .cards .weather .right img{
     position: absolute;
     width: 80%;
     right: 3rem;
@@ -319,44 +328,47 @@ nav .user img{
 
 /* =========== Temperature card =========== */
 
-.main .top .temperature .card_body{
+.main .cards .temperature .card_body{
     flex-direction: column;
 }
 
-.main .top .temperature .card_body .top{
+.main .cards .temperature .card_body .top{
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
+    justify-content: space-between;
 }
 
-.main .top .temperature .card_body .top .snow{
+.main .cards .temperature .card_body .top .snow{
     font-size: 50px;
     color: var(--color-cold);
 }
 
-.main .top .temperature .card_body .top span{
+.main .cards .temperature .card_body .top span{
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
-.main .top .temperature .card_body h2{
+.main .cards .temperature .card_body h2{
     font-size: 2.5rem;
     margin: 0 -2rem;
 }
 
-.main .top .temperature .card_body .bottom{
+.main .cards .temperature .card_body .bottom{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 0.5rem;
 }
 
-.main .top .temperature .card_body .toggle{
+.main .cards .temperature .card_body .toggle{
     width: 3rem;
 }
 
 /* =========== WIFI card =========== */
-.main .top .wifi .card_body{
+.main .cards .wifi .card_body{
     flex-direction: column;
     gap: 0;
     margin: 0;
@@ -364,7 +376,7 @@ nav .user img{
 }
 
 
-.main .top .wifi .card_body .top{
+.main .cards .wifi .card_body .top{
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -374,7 +386,7 @@ nav .user img{
     margin: 1rem 0;
 }
 
-.main .top .wifi .card_body .bottom{
+.main .cards .wifi .card_body .bottom{
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
@@ -382,43 +394,50 @@ nav .user img{
 }
 
 /* =========== Electricity card =========== */
-.main .top .electricity .card_body{
+.main .cards .electricity .card_body{
     display: flex;
     flex-direction: column;
 }
 
-.main .top .electricity .card_body .top{
+.main .cards .electricity .card_body .top{
     background: var(--color-primary);
     padding: 0;
     margin: 0;
     width: 100%;
     border-radius: 6px;
 }
-.main .top .electricity .card_body .toggle_big{
+.main .cards .electricity .card_body .toggle_big{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
     margin: 0;
     padding: 0;
-    width: 130%;
+    width: 50%;
     background: var(--color-sec-low);
     height: 2rem;
     border-radius: 6px;
 }
 
-.main .top .electricity .card_body .bottom{
+.main .cards .electricity .card_body .bottom{
     margin-top: 1rem;
     gap: 0;
     padding: var(--padding-small);
     align-items: baseline;
     justify-content: first baseline;
 }
-.main .top .electricity .card_body h3{
+.main .cards .electricity .card_body h3{
     align-self: center;
     margin-left: 1rem;
     font-size: 13px;
 }
 
-.main .top .electricity .card_body .toggle_big h3{
+.main .cards .electricity .card_body .toggle_big h3{
     margin: 5%;
     margin-left: 35%;
+}
+
+.main .cards .electricity .card_body .bottom{
+    align-self: center;
 }
 
 .main .movies {
@@ -482,18 +501,15 @@ nav .user img{
 .right{
     display: flex;
     flex-direction: column;
-    position: relative;
-    margin-top: 6rem;
-    margin-right: 5rem;
     width: 100%;
-    gap: 4rem;
+    gap: 4rem;  
 }
 
 .right .card{
     background: var(--color-card);
     padding: var(--padding-large);
     height: auto;
-    width: 80%;
+    width: 100%;
     border-radius: 1rem;
     display: flex;
 }
@@ -568,4 +584,126 @@ nav .user img{
 .right .quick_panel i{
     font-size: 24px;
     color: var(--color-secondary);
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .container nav .customise{
+        display: none;
+    }
+
+    .container{
+        grid-template-columns: 8rem auto 18rem;
+        width: 100%;
+    }
+
+    .main_nav a h3{
+        display: none;
+    }
+
+    .main .cards{
+        gap: 2rem;
+    }
+
+    .main .movies{
+        margin: 2rem auto;
+    }
+
+    .right .card{
+        width: 90%;
+        min-width: 200px;
+    }
+    
+}
+
+@media screen and (max-width: 960px) {
+    .container{
+        grid-template-columns: auto 18rem;
+        position: relative;
+        gap: 1rem;
+    }
+
+    .main_nav{
+        margin-left: -10rem;
+        z-index: 5;
+        position: fixed;
+        background: var(--color-card);
+        box-shadow: var(--card-shadow);
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .main_nav:hover{
+        margin-left: -6rem;
+    }
+
+    .main .movies{
+        margin: 1rem auto;
+    }
+
+    .main .cards{
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right{
+        flex-direction: row;
+    }
+
+    .main_nav{
+        position: fixed;
+        margin-left: -5.5rem;
+    }
+
+    .main_nav:hover{
+        margin-left: -5.5rem;
+    }
+
+    .main .cards{
+        margin-left: 7rem;
+    }
+
+    .main .movies{
+        margin-left: 7rem;
+        width: auto;
+        display: inline-block;
+    }
+
+    .right{
+        margin-left: 7rem;
+        width: auto;
+    }
+
+    @media screen and (max-width: 700px){
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main .cards{
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+        }
+
+        .main .cards .card{
+            width: auto;
+        }
+
+        .right{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right .card{
+            width: auto;
+        }
+    }
+
 }
