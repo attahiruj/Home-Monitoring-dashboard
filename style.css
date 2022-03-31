@@ -97,6 +97,7 @@ body{
     box-shadow: var(--btn-shadow);
     display: block;
     cursor: pointer;
+    
 }
 
 .toggler{
@@ -114,6 +115,7 @@ body{
 .card{
     box-shadow: var(--card-shadow);
     transition: all 1000 ease;
+    width: auto;
 }
 
 .card:hover{
@@ -138,17 +140,16 @@ nav{
     z-index: 5;
 }
 
-nav h3#time {
-    margin-left: 5rem;
+nav .time_date {
+    display: flex;
+    gap: 1rem;
 }
 
-nav h3#date{
-    margin-right: 10rem;
-    margin-left: 1rem;
-}
 
-nav span{
-    margin-left: 2rem;
+nav .customise{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 nav .user{
@@ -159,7 +160,8 @@ nav .user{
 }
 
 nav .username{
-    margin-left: 5px;
+    display: flex;
+    gap: 0.5rem;
 }
 
 nav .user img{
@@ -214,21 +216,23 @@ nav .user img{
 
 .main_nav .theme_mode{
     display: flex;
-    width: fit-content;
+    width: auto;
     align-items: center;
     gap: 1rem;
     margin-top: 2rem;
     margin-left: 2rem;
     color: var(--color-primary);
     background: var(--color-secondary);
-    border-radius: 10px;
+    border-radius: 5px;
     height: 30px;
 }
 
 .main_nav .theme_mode .active{
-    background: var(--color-card);
-    border-radius: 10px;
+    background: var(--color-sec-low);
+    border-radius: 5px;
     color: var(--color-secondary);
+    height: 30px;
+
 }
 
 
@@ -244,19 +248,19 @@ nav .user img{
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     width: auto;
+    height: auto;
 }
 
 .main .cards .card{
     background: var(--color-card);
     padding: var(--padding-small);
     height: 150px;
-    width: 250px;
+    width: auto;
     border-radius: 1rem;
 }
 
 .main .bottom .card{
     background: var(--color-card);
-    height: 200px;
     width: auto;
     margin: 3rem 1rem;
     border-radius: 1rem;
@@ -443,8 +447,9 @@ nav .user img{
 .main .movies {
     margin: 4rem 0rem;
     padding: 0rem;
-    width: 100%;
-    border-radius: 25px;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
 }
@@ -501,15 +506,16 @@ nav .user img{
 .right{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: auto;
     gap: 4rem;  
+    
 }
 
 .right .card{
     background: var(--color-card);
     padding: var(--padding-large);
     height: auto;
-    width: 100%;
+    width: auto;
     border-radius: 1rem;
     display: flex;
 }
@@ -573,7 +579,7 @@ nav .user img{
 }
 
 .right .quick_panel .card_body .toggle{
-    width: 25%;
+    width: 4rem;
 }
 
 .right .quick_panel .card_body h4{
@@ -607,10 +613,11 @@ nav .user img{
 
     .main .movies{
         margin: 2rem auto;
+        width: auto;
     }
 
     .right .card{
-        width: 90%;
+        width: auto;
         min-width: 200px;
     }
     
@@ -621,6 +628,7 @@ nav .user img{
         grid-template-columns: auto 18rem;
         position: relative;
         gap: 1rem;
+        margin-left: 2rem;
     }
 
     nav #date{
@@ -628,26 +636,29 @@ nav .user img{
     }
 
     .main_nav{
-        margin-left: -10rem;
+        margin-left: -9rem;
         z-index: 5;
         position: fixed;
         background: var(--color-card);
         box-shadow: var(--card-shadow);
-        padding: 1rem;
+        padding: 0.6rem;
         border-radius: 20px;
     }
-
-    .main_nav:hover{
-        margin-left: -6rem;
-    
+    .main_nav a{
+        margin-left: 1rem;
     }
 
     .main .movies{
-        margin: 1rem auto;
+        width: auto;
     }
 
     .main .cards{
         gap: 1rem;
+        width: auto;
+    }
+
+    .right {
+        justify-content: space-between;
     }
 }
 
@@ -663,25 +674,21 @@ nav .user img{
 
     .main_nav{
         position: fixed;
-        margin-left: -5.5rem;
+        margin-left: -9rem;
     }
 
-    .main_nav:hover{
-        margin-left: -5.5rem;
-    }
 
     .main .cards{
-        margin-left: 7rem;
+        margin-left: 4rem;
     }
 
     .main .movies{
-        margin-left: 7rem;
+        margin-left: 4rem;
         width: auto;
-        display: inline-block;
     }
 
     .right{
-        margin-left: 7rem;
+        margin-left: 4rem;
         width: auto;
     }
 
@@ -689,34 +696,41 @@ nav .user img{
         .container{
             display: flex;
             flex-direction: column;
+            width: 100%;
+        }
+
+        .main_nav{
+            margin-left: -7rem;
+        }
+
+        .main_nav a{
+            margin-left: 0;
         }
 
         .main .cards{
             display: flex;
             flex-direction: column;
             margin-top: 2rem;
+            
         }
 
         .main .cards .card{
             width: auto;
         }
-
-        .main .movies .movie_discription{
-            display: none;
+        .main .movies{
+            height: 100%;
+            width: auto;
         }
 
         .main .movies .movie_title{ 
             flex-direction: row;
             align-content: left;
             font-size: 12px;
+            gap: 1rem;
         }
 
         .main .movies .movie_desc .movie_title .stars{
-            margin-right: -3rem;
-        }
-
-        .main .movies .movie_title .thin{
-            display: none;
+            margin-right: -0rem;
         }
 
         .right{
@@ -727,6 +741,24 @@ nav .user img{
         .right .card{
             width: auto;
         }
+
+        nav {
+            gap: 0;
+        }
+
+        nav #time{
+            display: none;
+        }
+
+        nav .username{
+            display: none;
+        }
+
+        nav .user{
+            position: relative;
+            margin: 0;
+        }
+
 
     }
 
