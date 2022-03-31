@@ -163,8 +163,8 @@ nav .username{
 }
 
 nav .user img{
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
 }
 
@@ -427,7 +427,6 @@ nav .user img{
 }
 .main .cards .electricity .card_body h3{
     align-self: center;
-    margin-left: 1rem;
     font-size: 13px;
 }
 
@@ -440,6 +439,7 @@ nav .user img{
     align-self: center;
 }
 
+/* =========== Movie card =========== */
 .main .movies {
     margin: 4rem 0rem;
     padding: 0rem;
@@ -623,6 +623,10 @@ nav .user img{
         gap: 1rem;
     }
 
+    nav #date{
+        display: none;
+    }
+
     .main_nav{
         margin-left: -10rem;
         z-index: 5;
@@ -635,6 +639,7 @@ nav .user img{
 
     .main_nav:hover{
         margin-left: -6rem;
+    
     }
 
     .main .movies{
@@ -696,6 +701,24 @@ nav .user img{
             width: auto;
         }
 
+        .main .movies .movie_discription{
+            display: none;
+        }
+
+        .main .movies .movie_title{ 
+            flex-direction: row;
+            align-content: left;
+            font-size: 12px;
+        }
+
+        .main .movies .movie_desc .movie_title .stars{
+            margin-right: -3rem;
+        }
+
+        .main .movies .movie_title .thin{
+            display: none;
+        }
+
         .right{
             display: flex;
             flex-direction: column;
@@ -704,6 +727,7 @@ nav .user img{
         .right .card{
             width: auto;
         }
+
     }
 
 }
