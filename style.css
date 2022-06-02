@@ -274,6 +274,7 @@ nav .user img{
     flex-direction: column;
     padding: var(--padding-large);
     align-content: center;
+    justify-content: space-between;
 }
 
 .main .cards .card_name{
@@ -284,7 +285,8 @@ nav .user img{
 .main .cards .card_body{
     margin-top: 0.5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: auto;
 }
 
 .main .cards .card_name span{
@@ -503,6 +505,7 @@ nav .user img{
     padding: var(--padding-small);
     color: var(--color-sec-med);
     border-radius: 10px;
+    margin-top: 1rem;
 }
 
 /* =========== Right =========== */
@@ -628,10 +631,11 @@ nav .user img{
 
 @media screen and (max-width: 960px) {
     .container{
-        grid-template-columns: auto 18rem;
+        grid-template-columns: auto 16rem;
         position: relative;
         gap: 1rem;
         margin-left: 2rem;
+        width: 100%;
     }
 
     nav #date{
@@ -653,6 +657,7 @@ nav .user img{
 
     .main .movies{
         width: auto;
+        height: auto;
     }
 
     .main .cards{
@@ -683,6 +688,7 @@ nav .user img{
 
     .main .cards{
         margin-left: 4rem;
+        width: auto;
     }
 
     .main .movies{
